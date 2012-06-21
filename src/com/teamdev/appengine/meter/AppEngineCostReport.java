@@ -69,16 +69,20 @@ public class AppEngineCostReport extends AbstractVisualizer implements ActionLis
 	private static final String[] COLUMNS = {
         "Label",              
         "# Samples",      
-        "Average",
-        "Sum"
+        "Average (scale 1M)",
+        "Min (scale 1M)",
+        "Max (scale 1M)",
+        "Sum (scale 1M)"
         };
 	
     private static final TableCellRenderer[] RENDERERS =
         new TableCellRenderer[]{
             null, // Label
             null, // count
-            new NumberRenderer("$#0.00000"), // Average
-            new NumberRenderer("$#0.00000") // Sum
+            new NumberRenderer("$#0.00"), // Average
+            new NumberRenderer("$#0.00"), // Min
+            new NumberRenderer("$#0.00"), // Max
+            new NumberRenderer("$#0.00") // Sum
         };
 
 	public AppEngineCostReport() {
@@ -89,6 +93,8 @@ public class AppEngineCostReport extends AbstractVisualizer implements ActionLis
                     new Functor("getLabel"),             
                     new Functor("getCount"),             
                     new Functor("getAverage"),
+                    new Functor("getMin"),
+                    new Functor("getMax"),
                     new Functor("getSum")    
                 },
                 new Functor[] { null, null, null},

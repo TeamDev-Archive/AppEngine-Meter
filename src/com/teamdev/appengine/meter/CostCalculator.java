@@ -15,6 +15,10 @@ public class CostCalculator {
 	private double sum = 0;
 
 	private int count = 0;
+	
+	private double min = Double.MAX_VALUE;
+	
+	private double max = Double.MIN_VALUE;
 
 	public CostCalculator(String label) {
 		this.label = label;
@@ -30,7 +34,10 @@ public class CostCalculator {
 			return;
 		}
 		count++;
+		cost *= 1000;
 		sum += cost;
+		min = Math.min(min, cost);
+		max = Math.max(max, cost);
 	}
 	
 	private static Double getEstimatedDollars(SampleResult sample) {
@@ -57,6 +64,14 @@ public class CostCalculator {
 	
 	public double getAverage() {
 		return sum / count;
+	}
+	
+	public double getMin() {
+		return min;
+	}
+	
+	public double getMax() {
+		return max;
 	}
 	
 	public double getSum() {
