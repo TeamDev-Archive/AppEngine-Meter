@@ -13,7 +13,6 @@ import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.TableCellRenderer;
 
-import org.apache.jmeter.gui.util.HeaderAsPropertyRenderer;
 import org.apache.jmeter.samplers.SampleResult;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jmeter.visualizers.gui.AbstractVisualizer;
@@ -23,6 +22,8 @@ import org.apache.jorphan.gui.RendererUtils;
 import org.apache.jorphan.reflect.Functor;
 
 public class AppEngineCostReport extends AbstractVisualizer {
+
+	private static final long serialVersionUID = -4731016080238421438L;
 
 	private JTable myJTable;
 	
@@ -109,20 +110,18 @@ public class AppEngineCostReport extends AbstractVisualizer {
                 synchronized(row) {
                     row.addSample(sample);
                 }
-//                Calculator tot = tableRows.get(TOTAL_ROW_LABEL);
-//                synchronized(tot) {
-//                    tot.addSample(res);
-//                }
                 model.fireTableDataChanged();                
             }
         });
 	}
 
-	@Override
 	public void clearData() {
-		// TODO Auto-generated method stub
-
-	}
+        //Synch is needed because a clear can occur while add occurs
+        synchronized (lock) {
+            model.clearData();
+            tableRows.clear();
+        }
+    }
 
 	@Override
 	public String getLabelResource() {
