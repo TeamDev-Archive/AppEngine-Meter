@@ -79,7 +79,6 @@ public class AppEngineCostReport extends AbstractVisualizer {
         mainPanel.add(makeTitlePanel());
 
         myJTable = new JTable(model);
-        myJTable.getTableHeader().setDefaultRenderer(new HeaderAsPropertyRenderer());
         myJTable.setPreferredScrollableViewportSize(new Dimension(500, 70));
         RendererUtils.applyRenderers(myJTable, RENDERERS);
         myScrollPane = new JScrollPane(myJTable);
