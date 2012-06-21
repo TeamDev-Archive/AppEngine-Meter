@@ -101,7 +101,7 @@ public class AppEngineCostReport extends AbstractVisualizer {
                     if (row == null) {
                         row = new CostCalculator(sampleLabel);
                         tableRows.put(row.getLabel(), row);
-                        model.insertRow(row, model.getRowCount() - 1);
+                        model.addRow(row);
                     }
                 }
                 /*

@@ -1,7 +1,7 @@
 package com.teamdev.appengine.meter;
 
-import org.apache.http.HeaderElement;
-import org.apache.http.message.BasicHeaderValueParser;
+import org.apache.http.Header;
+import org.apache.http.message.BasicLineParser;
 import org.apache.jmeter.samplers.SampleResult;
 
 public class CostCalculator {
@@ -34,10 +34,18 @@ public class CostCalculator {
 	}
 	
 	private static Double getEstimatedDollars(SampleResult sample) {
-		HeaderElement[] headers = BasicHeaderValueParser.parseElements(sample.getResponseHeaders(), BasicHeaderValueParser.DEFAULT);
-		for (HeaderElement header : headers) {
+		String responseHeaders = sample.getResponseHeaders();
+		if (!responseHeaders.contains(ESTIMATED_CPM_DOLLARS_HEADER)) {
+			return null;
+		}
+		String[] headerStrings = responseHeaders.split("\\r?\\n");
+		for (String headerString : headerStrings) {
+			if (!headerString.contains(ESTIMATED_CPM_DOLLARS_HEADER)) {
+				continue;
+			}
+			Header header = BasicLineParser.parseHeader(headerString, BasicLineParser.DEFAULT);
 			if (header.getName().equals(ESTIMATED_CPM_DOLLARS_HEADER)) {
-				
+				return Double.parseDouble(header.getValue().substring(1));
 			}
 		}
 		return null;
