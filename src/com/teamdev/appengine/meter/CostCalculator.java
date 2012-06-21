@@ -8,7 +8,7 @@ public class CostCalculator {
 
 	private static final String ESTIMATED_CPM_DOLLARS_HEADER = "X-AppEngine-Estimated-CPM-US-Dollars";
 	
-	private static final String RESOURCE_USAGE_HEADER = "X-AppEngine-Resource-Usage";
+//	private static final String RESOURCE_USAGE_HEADER = "X-AppEngine-Resource-Usage";
 	
 	private String label;
 
