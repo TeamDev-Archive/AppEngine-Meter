@@ -12,8 +12,5 @@
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
         <javaElement handleIdentifier="=appengine-meter/src&lt;com.teamdev.appengine.meter"/>
-        <file path="/appengine-meter/.project"/>
-        <file path="/appengine-meter/.gitignore"/>
-        <file path="/appengine-meter/.classpath"/>
     </selectedElements>
 </jardesc>
