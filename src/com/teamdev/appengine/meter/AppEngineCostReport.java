@@ -78,7 +78,7 @@ public class AppEngineCostReport extends AbstractVisualizer implements ActionLis
             null, // Label
             null, // count
             new NumberRenderer("$#0.00000"), // Average
-            new NumberRenderer("$#0.000") // Sum
+            new NumberRenderer("$#0.00000") // Sum
         };
 
 	public AppEngineCostReport() {
