@@ -26,20 +26,33 @@ That's it!
 Contribute
 ==========
 
+Set Up Development Environment
+------------------------------
+
 1. Create folder for project
 2. Checkout JMeter 2.7
 > `svn co http://svn.apache.org/repos/asf/jmeter/tags/v2_7 jmeter2.7`
 
-3. Build JMeter
-	
-	cd jmeter2.7
-	ant download_jars package
-
-4. Get Appengine-Meter sources
+3. Get Appengine-Meter sources
 > `git clone https://github.com/TeamDev-Ltd/AppEngine-Meter.git appengine-meter`
 
+4. Build JMeter
+> `cd jmeter2.7`<br/>
+> `ant download_jars package`
+
+5. Copy `jmeter2.7/lib` folder to `appengine-meter`
+6. Start Eclipse and create workspace in folder created in the first step
+7. Copy `jmeter2.7/eclipse.classpath` to `jmeter2.7/.classpath`
+8. In Eclipse, create Java Project with name `jmeter2.7` and let Eclipse set up all source folders and libs automatically
+9. Go to `jmeter2.7` properties, then `Java Build Path`, then `Order and Export`. Click `Select All` and then `OK`
+10. Import `appengine-meter` as existing Eclipse project
+
+Run and Debug Locally
+---------------------
+
+TODO
 
 Build JAR
 ---------
 
-1. Double-click 
+TODO 
