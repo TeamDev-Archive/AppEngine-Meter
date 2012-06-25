@@ -30,11 +30,14 @@ Contribute
 2. Checkout JMeter 2.7
 > `svn co http://svn.apache.org/repos/asf/jmeter/tags/v2_7 jmeter2.7`
 
-3. Get Appengine-Meter sources
+3. Build JMeter
+	
+	cd jmeter2.7
+	ant download_jars package
+
+4. Get Appengine-Meter sources
 > `git clone https://github.com/TeamDev-Ltd/AppEngine-Meter.git appengine-meter`
 
-4. Open Eclipse, create workspace in folder from the first step
-5. Import both projects
 
 Build JAR
 ---------
