@@ -58,5 +58,5 @@ which is under `Java Application` section.
 Build JAR
 ---------
 
-Double-click on `export-jar.jardesc`, then click `Finish`. Then look for `appengine-meter.jar` \
+Double-click on `export-jar.jardesc`, then click `Finish`. Then look for `appengine-meter.jar`
 in the same folder.
