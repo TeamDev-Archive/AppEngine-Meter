@@ -11,6 +11,6 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
-        <javaElement handleIdentifier="=appengine-meter/src&lt;com.teamdev.appengine.meter"/>
+        <javaElement handleIdentifier="=appengine-meter/src&lt;org.teamdev.appengine.meter"/>
     </selectedElements>
 </jardesc>
