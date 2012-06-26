@@ -20,7 +20,7 @@ Use
 =======
 
 App Engine Meter is very similar to other [JMeter listeners](http://jmeter.apache.org/usermanual/listeners.html). 
-Just add it to your test plan:Êright-click on your `Thread Group` and select `Add->Listener->App Engine Cost Report`. 
+Just add it to your test plan: right-click on your `Thread Group` and select `Add->Listener->App Engine Cost Report`. 
 That's it!
 
 Contribute
