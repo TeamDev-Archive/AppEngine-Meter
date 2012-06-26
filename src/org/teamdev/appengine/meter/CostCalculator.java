@@ -1,4 +1,4 @@
-package com.teamdev.appengine.meter;
+package org.teamdev.appengine.meter;
 
 import org.apache.http.Header;
 import org.apache.http.message.BasicLineParser;

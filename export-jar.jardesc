@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="MacRoman" standalone="no"?>
 <jardesc>
-    <jar path="/Users/pavel/programs/apache-jmeter-2.7/lib/ext/appengine-meter.jar"/>
+    <jar path="appengine-meter/appengine-meter.jar"/>
     <options buildIfNeeded="true" compress="true" descriptionLocation="/appengine-meter/export-jar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
