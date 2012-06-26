@@ -50,9 +50,13 @@ Set Up Development Environment
 Run and Debug Locally
 ---------------------
 
-TODO
+There is ready-to-use launch configuration within project.
+
+In menu, select `Run->Run Configurations` and choose `JMeter 2.7 with App Engine Meter` 
+which is under `Java Application` section.
 
 Build JAR
 ---------
 
-TODO 
+Double-click on `export-jar.jardesc`, then click `Finish`. Then look for `appengine-meter.jar` \
+in the same folder.
