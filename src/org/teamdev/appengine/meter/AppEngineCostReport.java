@@ -1,4 +1,4 @@
-package com.teamdev.appengine.meter;
+package org.teamdev.appengine.meter;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
